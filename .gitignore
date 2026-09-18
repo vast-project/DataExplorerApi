@@ -361,3 +361,18 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+## ---------------------------------------------------------------------------
+## Build artefacts - hardened rules (added 2026-09-18)
+## These previously leaked into git history: .angular/cache webpack packs and
+## the dotnet publishContainer output. Keep these general, NOT version-pinned.
+## ---------------------------------------------------------------------------
+[Bb]in/
+[Oo]bj/
+.vs/
+publishContainer/
+node_modules/
+.angular/
+/dist/
+*.dll
+*.exe
+*.pdb
